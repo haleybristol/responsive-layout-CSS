@@ -8,10 +8,10 @@
 
 /* For testing only */
 
-/**:not(body):not(html):not(.container) {
+*:not(html):not(.container) {
   box-sizing:border-box;
   border:2px dashed #000;
-}*/
+}
 
 /* End for testing */
 
@@ -19,86 +19,70 @@
   width: device-width;
 }
 
-html {
-  overflow-y: scroll;
-  display: block;
-  margin: 0 auto;
-  width: 100%
-}
 
 body {
   background-color: black;
-  color: white;
-}
-.container {
+  font-family: 'Josefin Slab', serif;
+  height: 100%;
   width: 100%;
-  margin: 5% auto;
-  padding: 0 5%;
-  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
 }
 
-/*Header*/
-.header {
+.nav {
   background-color: white;
-  color: black;
-  padding: 1px 20px;
-  line-height: .8;
+  padding-left: 1em;
+  height: 12%;
+  width: 100%;
+
+ }
+
+ .nav h3 {
+   margin: 0;
+   padding-left: 0;
+ }
+
+ .nav ul {
+  background-color: #F4F4F4;
+  margin: 0;
+  height: 50%;
+  padding-left: 0;
+
+ }
+
+ li {
+   list-style: none;
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+   text-transform: capitalize;
+   font-size: .6em;
+ }
+
+.main {
+  background-color: black;
+  height: 50vh;
 }
 
-#icon {
-  float: right;
-  max-width: 100%
-  height: auto;
-  margin: auto 0;
-  margin-top: -80px;
+.background {
+  background-image: url()
 }
-/*End Header*/
-
-/*Navbar*/
-.navbar li {
-  display: inline-block;
-  text-align: center;
-  padding-right: 48px;
-  margin-left: -40px;
-  text-transform: uppercase;
-  font-size: .7em;
-}
-/*End Navbar*/
-.main h3{
-  text-align: center;
-}
-.col1 h6  {
-  text-align: left;
-
+.col1, .col2 {
+  width: 100%;
 }
 
-.col1 li {
-  list-style: none;
-  margin-left: -40px;
+.col1 {
+  margin: 5% 0;
+  background-color: rgba(255, 0, 0, .57);
+  height: 18.5vh;
 }
 
-#haus {
-  max-width: 100%;
-  height: auto;
+.col2 {
+  margin: 5% 0;
+  background-color: rgba(0, 0, 255, 0.57);
+  height: 18.5vh;
 }
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-.featured {
-  background-color: white;
-  color: black;
-  text-align: left;
-  font-weight: bold;
-  margin-top: -3px;
-}
-
 
 @media screen and (min-width: 768px) {
-
   .container {
     width: 100%;
     margin: auto;
@@ -112,18 +96,14 @@ img {
 
 html, body {
   margin: 0;
-  height: 100vh;
 }
-
-
 
   .col1 {
     float: left;
   }
 
   .col2 {
-    float:right;
-    text-align: left;
+    float: right;
   }
 
 }
