@@ -132,6 +132,7 @@ body {
   margin: 0;
   height: 7vh;
   font-size: .6em;
+  width: 100%;
 }
 
 .sexy h4, p {
@@ -158,16 +159,18 @@ body {
   height: 18vh;
 }
 
-@media screen and (min-width: 768px) {
-  .container {
+@media screen and (min-width: 450px) {
+
+  .background {
     width: 100%;
-    margin: auto;
+    height: 100%;
+    text-align: center;
   }
 
   .col1, .col2 {
     width: 48%;
-    height: 50vh;
-    margin: 5% 0 0 0;
+    height: 30vh;
+    margin: 20% 0 0 0;
   }
 
 html, body {
@@ -184,12 +187,18 @@ html, body {
 
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 883px) {
   .main {
     float: left;
-    width: 49%;
+    width: 50%;
+    height: 60vh;
+    background-size: cover;
+  }
+
+  .background {
     height: 100vh;
-}
+    width: 100%;
+  }
 
   .col1, .col2 {
     float: right;
