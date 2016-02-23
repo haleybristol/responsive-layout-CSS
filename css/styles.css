@@ -6,70 +6,8 @@
             box-sizing: border-box;
 }
 
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/* For testing only */
-
-*:not(html):not(.container) {
-  box-sizing:border-box;
-  border:2px dashed yellow;
-}
-
-/* End for testing */
-
-@-ms-viewport{
-  width: device-width;
-}
-
-.container {
+html {
   margin: 0;
-  width: 100%;
-  height: 100vh;
 }
 
 body {
@@ -80,29 +18,22 @@ body {
   margin: 0;
 }
 
-.nav {
+.header {
   background-color: white;
   padding-left: 1em;
-  height: 7vh;
+  height: 8vh;
   width: 100%;
-
- }
-
- .nav h3 {
-   margin: 0;
-   padding-left: 0;
- }
-
- .nav ul {
-  background-color: #F4F4F4;
   margin: 0;
-  height: 50%;
-  padding-left: 0;
-  padding-bottom: 0;
-
+  padding-top: 1em;
  }
 
- li {
+ .header h3 {
+   padding: 0;
+   margin: 0;
+   width: 100%;
+ }
+
+ .header ul li {
    list-style: none;
    display: inline-block;
    margin: 0;
@@ -111,106 +42,134 @@ body {
    font-size: .6em;
  }
 
-.main {
-  background-color: black;
-  height: 50vh;
-  width: 100%;
-  margin: 0;
-  background-size: 100%;
-}
-
-.background {
-  background-image: url("../img/inferno.jpg");
-  width: 100%;
-  height: 80%;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.sexy {
+.caption {
   color: white;
-  margin: 0;
-  height: 7vh;
-  font-size: .6em;
-  width: 100%;
+  margin-top: 30px;
+  margin-left: .5em;
+
 }
 
-.sexy h4, p {
-  margin: 1em 0;
-  padding: 0;
-  height: 2vh;
+.background img {
   width: 100%;
+  height: 100%;
+  margin-top: 10px;
 }
-.col1, .col2 {
+
+.background p {
+  color: white;
+  margin-top: .5em;
+  margin-left: .5em;
+}
+
+.press, .about {
   width: 100%;
   padding-top: 1em;
-  margin-top: 2em;
   padding-left: 1em;
   background-color: white;
-  margin: 4em 0;
-
+  color: black;
 }
 
-.col1 {
+
+.press {
   height: 10vh;
+  margin-top: 2em;
 }
 
-.col2 {
-  height: 18vh;
+.about {
+  height: 20vh;
+  margin-top: 1em;
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 700px) {
 
+body {
+  background-color: white;
+}
+
+.header {
+  position: absolute;
+  background-color: rgba(f, f, f, .6);
+  width: 250px;
+  height: 130px;
+  top: 100px;;
+}
+
+.header ul li {
+  display: block;
+  overflow: auto;
+
+}
+
+.background p {
+  display: none;
+}
+
+.caption {
+  display: none;
+  height: 0;
+}
+
+
+
+.background {
+  width: 100%;
+  height: 65%;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+
+
+  .press, .about {
+    width: 50%;
+    height: 35%;
+    margin: 0;
+    background-color: black;
+    color: white;
+    padding-top: 5px;
+    padding-right: 20px;
+    font-size: 1em;
+    border: 10px solid white;
+  }
+
+  .press {
+    float: left;
+  }
+
+  .about {
+    float: right;
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
   .background {
     width: 100%;
     height: 100%;
-    text-align: center;
+    max-width: 1800px;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
   }
 
-  .col1, .col2 {
-    width: 48%;
-    height: 30vh;
-    margin: 20% 0 0 0;
+  .header ul, li{
+    margin-top: -20px;
   }
 
-html, body {
-  margin: 0;
-}
-
-  .col1 {
-    float: left;
+  .caption {
+    height: 0;
+    display: none;
   }
 
-  .col2 {
+  .press, .about {
     float: right;
+    height: 50vh;
+    width: 51%;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    font-size: 2em;
+    padding-top: 40px;
   }
 
-}
-
-@media screen and (min-width: 883px) {
-  .main {
-    float: left;
-    width: 50%;
-    height: 60vh;
-    background-size: cover;
-  }
-
-  .background {
-    height: 100vh;
-    width: 100%;
-  }
-
-  .col1, .col2 {
-    float: right;
-    height: 48vh;
-    width: 49%;
-  }
-
-  .col1 {
-    margin: 0 0 2vh 0;
-  }
-
-  .col2 {
-    margin: 2vh 0 0 0;
-  }
 }
