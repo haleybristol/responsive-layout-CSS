@@ -18,10 +18,15 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .header {
   background-color: white;
   padding-left: 1em;
-  height: 8vh;
+  height: 70px;
   width: 100%;
   margin: 0;
   padding-top: 1em;
@@ -36,16 +41,21 @@ body {
  .header ul li {
    list-style: none;
    display: inline-block;
-   margin: 0;
+   margin-top: -10px;
    padding: 0;
    text-transform: capitalize;
    font-size: .6em;
+   max-height: 900px;
+   max-width: 1350px;
  }
 
 .caption {
   color: white;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: .5em;
+  line-height: 12px;
+  margin-right: .5em;
+  border-bottom: 2px solid white;
 
 }
 
@@ -53,31 +63,34 @@ body {
   width: 100%;
   height: 100%;
   margin-top: 10px;
+  max-width: 900px;
+  max-height: 900px;
 }
 
 .background p {
   color: white;
-  margin-top: .5em;
+  margin-top: .1em;
   margin-left: .5em;
 }
 
 .press, .about {
   width: 100%;
-  padding-top: 1em;
-  padding-left: 1em;
+  padding-top: .1em;
+  padding-left: .5em;
+  margin-top: -.6em;
   background-color: white;
   color: black;
 }
 
 
 .press {
-  height: 10vh;
-  margin-top: 2em;
+  height: 40px;
 }
 
 .about {
-  height: 20vh;
+  height: 90px;
   margin-top: 1em;
+  padding-right: 10px;
 }
 
 @media screen and (min-width: 700px) {
@@ -97,6 +110,7 @@ body {
 .header ul li {
   display: block;
   overflow: auto;
+  padding-bottom: 10px;
 
 }
 
@@ -113,16 +127,20 @@ body {
 
 .background {
   width: 100%;
-  height: 65%;
+  height: 100%;
   margin-top: -10px;
   margin-bottom: 10px;
+}
+
+.background img {
+  min-width: 1100px;
+  min-height: 800px;
 }
 
 
 
   .press, .about {
     width: 50%;
-    height: 35%;
     margin: 0;
     background-color: black;
     color: white;
@@ -130,19 +148,22 @@ body {
     padding-right: 20px;
     font-size: 1em;
     border: 10px solid white;
+    border-top: 20px solid white;
   }
 
   .press {
     float: left;
+    height: 200px
   }
 
   .about {
     float: right;
+    height: 200px;
   }
 
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
   .background {
     width: 100%;
     height: 100%;
@@ -150,26 +171,42 @@ body {
     overflow: hidden;
     position: absolute;
     z-index: -1;
+    background-color: black;
   }
 
   .header ul, li{
-    margin-top: -20px;
+    padding-bottom: 10px;
   }
 
   .caption {
     height: 0;
     display: none;
+
   }
 
-  .press, .about {
+  .columns {
     float: right;
-    height: 50vh;
-    width: 51%;
+    height: 100vh;
+    width: 500px;
     margin: 0;
     position: relative;
     z-index: 1;
-    font-size: 2em;
+    font-size: 1.2em;
     padding-top: 40px;
+    margin: 0;
   }
+
+  .press {
+    width: 100%;
+    height: 50vh;
+    margin-top: -41px;
+  }
+
+  .about {
+    width: 100%;
+    height: 50vh;
+
+  }
+
 
 }
