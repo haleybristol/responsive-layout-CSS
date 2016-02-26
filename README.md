@@ -4,7 +4,7 @@
 
 ## Description
 
-This webpage is a replication of the styles used on the Andersson-Wise website home page. The design is based off the Mondrian Style Layout. There are three breakpoints in which the layout is responsive. Relative units are used when appropriate. The site does not use bootstrap or any front-end framework. Images are somewhat fluid.
+This webpage is a replication of the styles used on the Andersson-Wise website home page. The design is recognized as a Mondrian Style Layout. There are three break points catering to mobile, tablet and laptop. Relative units are used when appropriate. The site does not use bootstrap or any front-end framework. Images are fluid.
 
 ## Setup/Installation Requirements
 
@@ -12,11 +12,11 @@ Git Clone!!
 
 ## Known Bugs
 
-Images are not fully fluid.
+No known bugs.
 
 ## Support and contact details
 
-Feel free to contact me on my github haleybristol.
+Feel free to contact me at hebristol@gmail.com.
 
 ## Technologies Used
 
